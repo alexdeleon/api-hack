@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>api hack</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="google-signin-clientid" content="371469092466-7355n90gmd8bai3s3re383lupsp88blt.apps.googleusercontent.com" />
+        <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login email" />
+        <meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
+        <meta name="google-signin-cookiepolicy" content="single_host_origin" />
+
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+        <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li><button id="signinButton" class="btn btn-danger "><i class="fa fa-google-plus"></i>&nbsp; Sign in</button></li>
+                    <li><div id="user-info"></div></li>
+                </ul>
+                <h3 class="text-muted">API hack</h3>
+            </div>
+
+            <div class="jumbotron">
+                <img width="200" src="images/f9OlAwVU_400x400.jpeg" style="margin-bottom: 33px;">
+                <p lass="lead">
+                   <a id="feedback-btn" class="btn btn-success" data-toggle="modal" data-target="#feedback-dialog">Give us your Feedback!</a>
+                </p>
+            </div>
+
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h4>Google+ API</h4>
+                    <p>We use Google+ Javascript API to implement login and getting the user profile.</p>
+
+
+
+                    <h4>Mandrill</h4>
+                    <p>We use Mandrill's REST API to send the feedback email.</p>
+
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <p style="text-align: center;">We <span class="glyphicon glyphicon-heart"></span> APIs!</p>
+            </div>
+        </div>
+
+        <div id="thanks-msg" class="alert alert-success" style="display: none;" role="alert">Thank you for your feedback  :)</div>
+
+
+        <!-- Feedback modal -->
+        <div id="feedback-dialog" class="modal faden">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    
+                        <div class="modal-header">
+                            <h4 class="modal-title">We appreciate your comments...</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="feedback-form" class="form-horizontal" role="form">
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                  <label class="control-label" for="name">Name</label>
+                                  <div class="controls">
+                                    <input id="name" name="name" type="text" placeholder="" class="form-control input-xlarge">
+                                    
+                                  </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="control-group">
+                                  <label class="control-label" for="email">Email</label>
+                                  <div class="controls">
+                                    <input id="email" name="email" type="text" placeholder="" class="form-control input-xlarge">
+                                    
+                                  </div>
+                                </div>
+
+                                <!-- Textarea -->
+                                <div class="control-group">
+                                  <label class="control-label" for="feedback"></label>
+                                  <div class="controls">                     
+                                    <textarea id="feedback" name="feedback" class="form-control" rows="10">What do you think about our website?</textarea>
+                                  </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" form="feedback-form" class="btn btn-primary">Send</button>
+                        </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="../bower_components/bootstrap/js/affix.js"></script>
+        <script src="../bower_components/bootstrap/js/alert.js"></script>
+        <script src="../bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="../bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="../bower_components/bootstrap/js/modal.js"></script>
+        <script src="../bower_components/bootstrap/js/transition.js"></script>
+        <script src="../bower_components/bootstrap/js/button.js"></script>
+        <script src="../bower_components/bootstrap/js/popover.js"></script>
+        <script src="../bower_components/bootstrap/js/carousel.js"></script>
+        <script src="../bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="../bower_components/bootstrap/js/collapse.js"></script>
+        <script src="../bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
